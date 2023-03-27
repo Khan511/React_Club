@@ -1,0 +1,435 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -4rem;
+}
+.left-h {
+  padding: 0 2rem 2rem 0;
+  display: flex;
+  flex-direction: column;
+  flex: 1.3;
+  gap: 2rem;
+  margin-top: -7.8rem;
+}
+.right-h {
+  flex: 0.7;
+  background: var(--orange);
+  position: relative;
+  border-radius: 15px;
+  box-shadow: 1px 1px 4px white;
+}
+.best_ad {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: fit-content;
+  padding: 1.3rem;
+  border-radius: 4rem;
+  background: #363d42;
+  color: white;
+  font-size: 24px;
+  text-transform: capitalize;
+  margin-top: 8rem;
+  position: relative;
+}
+.best_ad span {
+  z-index: 2;
+}
+.best_ad > div {
+  position: absolute;
+  width: 7rem;
+  height: 80%;
+  background: var(--orange);
+  border-radius: 3rem;
+  left: 10px;
+  z-index: 1;
+  animation: move 2s linear;
+}
+
+@keyframes move {
+  0% {
+    transform: translate(300px);
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 6rem;
+  font-weight: bold;
+  color: white;
+  gap: 1.5rem;
+  text-transform: uppercase;
+}
+.hero-text :nth-child(3) {
+  font-size: 1rem;
+  font-weight: normal;
+  text-transform: none;
+  letter-spacing: 1px;
+  width: 80%;
+}
+.figures {
+  display: flex;
+  align-items: flex-end;
+  color: white;
+  gap: 4rem;
+}
+.figures h1 {
+  line-height: 10px;
+  font-weight: 300;
+}
+.figures p {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: var(--gray);
+}
+.calories {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.5rem;
+  background: var(--caloryCard);
+  align-items: flex-end;
+  border-radius: 9px;
+  box-shadow: 2px 2px 4px orange;
+}
+.calories div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.calories img {
+  height: 55px;
+}
+.calories div p {
+  font-size: 12px;
+  color: var(--gray);
+  margin: 0;
+}
+.calories div h3 {
+  font-size: 18px;
+  font-weight: 200;
+  margin: 0;
+}
+.hearo_btns {
+  display: flex;
+  gap: 1rem;
+}
+.hearo_btns :nth-child(1) {
+  color: black;
+  background: var(--orange);
+  border: none;
+  box-shadow: 1px 1px 4px white;
+}
+.hearo_btns :nth-child(2) {
+  background: transparent;
+  color: orange;
+}
+
+.heart-rate {
+  display: flex;
+  position: absolute;
+  top: 10rem;
+  right: 6rem;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  width: fit-content;
+  background: #363d42;
+  flex-direction: column;
+  border-radius: 12px;
+  box-shadow: 1px 1px 4px white;
+  transition: all 0.3s;
+  animation: heartRate 1s;
+}
+@keyframes heartRate {
+  0% {
+    transform: translate(50px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+.heart-rate:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+.right-h .btn {
+  position: absolute;
+  right: 3rem;
+  top: 2rem;
+}
+.heart-rate img {
+  width: 45px;
+}
+.heart-rate :nth-child(2) {
+  color: var(--gray);
+  font-size: 14px;
+}
+.heart-rate :nth-child(3) {
+  color: white;
+  font-size: 20px;
+}
+
+.hero_image_back {
+  position: absolute;
+  top: 10%;
+  left: -40%;
+  width: 300px;
+  z-index: -1;
+  animation: heroBack 0.5s;
+}
+@keyframes heroBack {
+  0% {
+    transform: translate(50px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+.hero_image {
+  position: absolute;
+  top: 27%;
+  left: -28%;
+  width: 450px;
+}
+.hero-blur {
+  width: 52rem;
+  height: 40rem;
+  left: 0;
+}
+
+@media screen and (max-width: 1125px) {
+  .hero {
+    margin-top: 0;
+  }
+  .left-h {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex: 1.1;
+    gap: 1rem;
+    margin-top: -3.7rem;
+  }
+  .best_ad {
+    margin-top: 4rem;
+  }
+  .right-h {
+    flex: 0.8;
+    background: var(--orange);
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px white;
+  }
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+    gap: 1rem;
+    margin: 2rem 0;
+    text-transform: uppercase;
+  }
+  .hero_image {
+    position: absolute;
+    top: 37%;
+    left: -15%;
+    width: 300px;
+  }
+  .hero_image_back {
+    position: absolute;
+    top: 25%;
+    left: -30%;
+    width: 200px;
+    z-index: -1;
+    animation: heroBack 0.5s;
+  }
+  .heart-rate {
+    right: 5rem;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    width: fit-content;
+  }
+  .figures {
+    display: flex;
+    align-items: flex-end;
+    color: white;
+    gap: 2rem;
+    margin-top: 5rem;
+  }
+  .figures h1 {
+    line-height: 5px;
+    font-weight: 200;
+    font-size: 1.7rem;
+  }
+  .figures p {
+    font-size: 14px;
+  }
+  .calories {
+    gap: 1rem;
+  }
+  .blur {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30rem;
+  }
+  .blur {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  main {
+    margin-left: 6rem;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    font-size: 3rem;
+    gap: 0rem;
+  }
+
+  .left-h {
+    padding: 1rem;
+    gap: 1rem;
+    margin-top: -9.8rem;
+  }
+  .figures {
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .right-h {
+    display: flex;
+    flex-direction: column;
+    margin-top: -8rem;
+    margin-bottom: 8rem;
+    border-radius: 15px;
+    box-shadow: 1px 1px 4px white;
+  }
+  .hero_image {
+    position: absolute;
+    top: 220px;
+    left: -28%;
+    width: 250px;
+  }
+  .hero_image_back {
+    top: 140px;
+    left: -60px;
+    width: 200px;
+  }
+  .heart-rate {
+    position: absolute;
+    top: 16rem;
+    right: 8rem;
+    gap: 1rem;
+    padding: 1rem;
+    width: 130px;
+  }
+  .right-h .btn {
+    position: absolute;
+    right: 6.2rem;
+    width: 190px;
+    top: 30rem;
+  }
+}
+@media screen and (max-width: 430px) {
+  .left-h {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .right-h {
+    margin-bottom: 11rem;
+  }
+  .best_ad {
+    padding: 1.3rem;
+    font-size: 20px;
+    margin-top: 2rem;
+  }
+
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .hero-text :nth-child(3) {
+    font-size: 0.8rem;
+    width: 280px;
+    margin-top: 2rem;
+  }
+  .figures {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 1rem 1rem;
+  }
+  .figures h1 {
+    font-size: 18px;
+  }
+  .figures p {
+    font-size: 12px;
+  }
+  .hearo_btns button {
+    width: 150px;
+    font-size: 16px;
+    padding: 0.7rem 1rem;
+  }
+  .hero_image {
+    position: absolute;
+    top: 180px;
+    left: -90px;
+    width: 250px;
+  }
+  .hero_image_back {
+    top: 140px;
+    left: -130px;
+    width: 150px;
+  }
+  .heart-rate {
+    position: absolute;
+    top: 24rem;
+    right: 3rem;
+    gap: 0.5rem;
+    padding: 0.3rem;
+    width: 130px;
+  }
+  .heart-rate img {
+    width: 30px;
+  }
+
+  .heart-rate span {
+    width: 100px;
+  }
+  .right-h .btn {
+    position: absolute;
+    right: -5.2rem;
+    width: 190px;
+    top: 36rem;
+  }
+}

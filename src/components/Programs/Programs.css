@@ -1,0 +1,100 @@
+.trainings-programs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15rem 0 5rem 0;
+}
+.heading {
+  display: flex;
+  gap: 1rem;
+  color: white;
+}
+.heading span {
+  font-size: 4rem;
+  font-weight: 600;
+}
+.training-types {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 3rem;
+}
+.box {
+  padding: 2rem 1.5rem;
+  padding-bottom: 1rem;
+  background: #464d53;
+  margin: 1rem;
+  color: white;
+  box-shadow: 4px 4px 8px black;
+  border-radius: 15px;
+  max-width: 320px;
+  cursor: pointer;
+}
+.box:hover {
+  background: var(--planCard);
+  box-shadow: 3px 3px 6px white;
+}
+.box :nth-child(1) {
+  fill: white;
+}
+.box :nth-child(3) {
+  color: var(--gray);
+}
+
+.join_now {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.join_now:hover :nth-child(2) {
+  transform: translate(4px);
+  transition: all 0.4s;
+  color: var(--orange);
+}
+@media screen and (max-width: 1125px) {
+  .trainings-programs {
+    margin: 8rem 0;
+  }
+  .heading {
+    gap: 1rem;
+  }
+  .heading span {
+    font-size: 2.7rem;
+    font-weight: 600;
+  }
+}
+@media screen and (max-width: 830px) {
+  .heading span {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  .training-types {
+    margin-top: 1rem;
+  }
+  .box {
+    padding: 1rem;
+    margin: 0.5rem;
+
+    max-width: 280px;
+    cursor: pointer;
+  }
+  .join_now {
+    gap: 1rem;
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 430px) {
+  .heading span {
+    font-size: 1rem;
+    margin-top: 2rem;
+    font-weight: normal;
+  }
+  .training-types {
+    display: flex;
+    flex-direction: column;
+  }
+}
