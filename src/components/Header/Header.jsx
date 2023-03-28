@@ -3,7 +3,6 @@ import "./Header.css";
 import Logo from "../../assets/logo.png";
 import bar from "../../assets/bars.png";
 import { Link } from "react-scroll";
-import Barmenu from "../BarMenu/Barmenu";
 
 const Header = () => {
   const [show, setShow] = useState("hidden");
