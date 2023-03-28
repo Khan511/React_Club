@@ -143,11 +143,11 @@
   border-radius: 12px;
   box-shadow: 1px 1px 4px white;
   transition: all 0.3s;
-  animation: heartRate 1s;
+  animation: heartRate 2s;
 }
 @keyframes heartRate {
   0% {
-    transform: translate(50px);
+    transform: translate(100px);
   }
   100% {
     transform: translate(0);
@@ -180,11 +180,11 @@
   left: -40%;
   width: 300px;
   z-index: -1;
-  animation: heroBack 0.5s;
+  animation: heroBack 2s;
 }
 @keyframes heroBack {
   0% {
-    transform: translate(50px);
+    transform: translate(100px);
   }
   100% {
     transform: translate(0px);

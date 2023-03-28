@@ -1,6 +1,7 @@
 import React from "react";
 import calories from "../../assets/calories.png";
 import "./Hero.css";
+import NumberCounter from "number-counter";
 import hero_image from "../../assets/hero_image.png";
 import hero_image_back from "../../assets/hero_image_back.png";
 import Heart from "../../assets/heart.png";
@@ -32,15 +33,21 @@ const Hero = () => {
         {/* Figures*/}
         <div className="figures">
           <div>
-            <h1>+ 140 </h1>
+            <h1>
+              <NumberCounter end={140} start={100} delay="4" preFix="+" />
+            </h1>
             <p>expert coaches</p>
           </div>
           <div>
-            <h1>+ 978 </h1>
+            <h1>
+              <NumberCounter end={978} start={800} delay="4" preFix="+" />
+            </h1>
             <p>member joined</p>
           </div>
           <div>
-            <h1>+ 50 </h1>
+            <h1>
+              <NumberCounter end={50} start={25} delay="4" preFix="+" />
+            </h1>
             <p>fitness programs</p>
           </div>
           <div className="calories">

@@ -1,3 +1,5 @@
+/* react-scripts build */
+
 .header {
   display: flex;
   justify-content: center;
@@ -13,7 +15,9 @@
   width: 10rem;
   height: 3rem;
 }
-
+/* .menu {
+  display: none;
+} */
 .header_menu {
   display: flex;
   list-style: none;
@@ -26,16 +30,51 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 726px) {
-  .header > :nth-child(2) {
-    z-index: 20;
+.hidden {
+  display: none;
+}
 
-    right: 2rem;
+/* {DropDown Menuy} */
+.dropDown {
+  display: flex;
+  flex-direction: column;
+  background: var(--appColor);
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 10;
+  top: 80px;
+  right: 70px;
+  color: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  box-shadow: 2px 2px 4px black;
+}
+
+.dropDown li {
+  padding: 0.5rem 1rem;
+  list-style: none;
+}
+.dropDown li:hover {
+  color: orange;
+  cursor: pointer;
+}
+.dropDown {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 726px) {
+  .header_menu {
+    display: none;
   }
+
   .bar {
     display: block;
     cursor: pointer;
-    /* position: fixed; */
+  }
+  .dropDown {
+    visibility: visible;
   }
 
   .header {
@@ -43,18 +82,5 @@
     justify-content: space-between;
     width: 300px;
     align-items: center;
-  }
-
-  .header_menu {
-    display: flex;
-    flex-direction: column;
-    background: var(--appColor);
-    padding: 0.5rem;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    z-index: 10;
-    top: 50px;
-    right: 70px;
   }
 }
